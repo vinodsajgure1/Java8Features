@@ -1,4 +1,4 @@
-package com.example.lambda;
+package com.example.lambdaExpression;
 
 @FunctionalInterface
 interface MyInterface {

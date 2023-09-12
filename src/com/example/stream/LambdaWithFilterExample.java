@@ -20,5 +20,8 @@ public class LambdaWithFilterExample {
 		System.out.println("Odd Numbers Are : ");
 		oddNumbers.forEach(n -> System.out.println(n));
 	}
+	
+	// Intermediate Operations :  filter , map , sorted.
+	// Terminal Operations : forEach , collect , match , count ,reduce.
 
 }

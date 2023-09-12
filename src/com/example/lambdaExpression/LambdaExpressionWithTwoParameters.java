@@ -1,4 +1,4 @@
-package com.example.lambda;
+package com.example.lambdaExpression;
 
 public class LambdaExpressionWithTwoParameters {
 
