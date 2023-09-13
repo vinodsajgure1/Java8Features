@@ -1,20 +1,31 @@
 package com.example.stream;
 
-import java.util.Arrays;
-import java.util.List;
+import java.util.stream.IntStream;
 
 public class ParallelStreamExample {
 
 	public static void main(String[] args) {
-
-		List<String> list = Arrays.asList("L", "k", "S", "R", "V");
-
-		list.parallelStream().forEach(System.out::print);
-		// Parallel Stream example , In the output it will not maintain  the order of list elements.
 		
-		// If we want orderd list then we can use forEachOrdered method
+		long start=0;
+		long end=0;
 		
-		list.parallelStream().forEachOrdered(System.out::print);
+		start= System.currentTimeMillis();
+		IntStream.range(1, 25).forEach(System.out::print);
+		end=System.currentTimeMillis();
+		
+		System.out.println(" Plain stream time taken : "+(end-start));
+		
+		
+		System.out.println("=============================================");
+		
+		start= System.currentTimeMillis();
+		IntStream.range(1, 25).parallel().forEach(System.out::print);
+		end=System.currentTimeMillis();
+		
+		System.out.println(" Parallel stream time taken : "+(end-start));
+		
+		
+		
 	}
 
 }
